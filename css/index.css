@@ -163,6 +163,10 @@ h2 {
   font-size: 3.2rem;
   padding-bottom: 10px;
 }
+h3 {
+  font-size: 2.8rem;
+  padding-bottom: 10px;
+}
 h4 {
   font-size: 2.5rem;
   padding-bottom: 10px;
@@ -180,6 +184,13 @@ a {
   font-size: 1.6rem;
   text-decoration: none;
   color: #FFEB38;
+}
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.2s;
 }
 .header {
   background-color: #141115;
@@ -275,4 +286,21 @@ a {
   .hero .jumbotron--subtitle {
     padding: 1rem;
   }
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 3rem;
+  min-width: 100vh;
+}
+.features .feature {
+  flex-basis: 30%;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 }
