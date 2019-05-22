@@ -206,6 +206,9 @@ a {
   text-decoration: none;
   color: #FFEB38;
 }
+a:hover {
+  color: #9B51E0;
+}
 .flex-container {
   display: flex;
   flex-flow: row wrap;
@@ -231,6 +234,9 @@ a {
 .header .nav a {
   display: inline-block;
   padding: 1rem 3rem;
+}
+.header .btn:hover {
+  color: #141115;
 }
 @media (max-width: 500px) {
   .header {
@@ -461,4 +467,54 @@ button {
 }
 .btn:focus {
   outline: none;
+}
+.footer {
+  padding: 0 4rem;
+  color: #FBFFFE;
+  background-color: #000000;
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer .logo {
+  background: rgba(78, 23, 129, 0.9);
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 2rem;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0.8rem rgba(20, 17, 21, 0.6);
+}
+.footer .logo img {
+  height: 6rem;
+}
+.footer .btn {
+  font-size: 2rem;
+  margin: 1rem;
+}
+.footer .footnote {
+  border-top: 1px solid rgba(251, 255, 254, 0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: normal;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+.footer .footnote .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: normal;
+}
+@media (max-width: 500px) {
+  .footer .footnote {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
