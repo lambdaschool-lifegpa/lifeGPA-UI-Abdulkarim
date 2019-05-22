@@ -355,6 +355,7 @@ a:hover {
 }
 .testimonials--carousel {
   position: relative;
+  width: 60%;
   padding: 2rem 10rem;
   background-color: rgba(20, 17, 21, 0.5);
 }
