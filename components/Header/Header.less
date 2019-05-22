@@ -1,0 +1,41 @@
+.header {
+  background-color: @secondaryColor;
+  padding: .5rem 4rem;
+  .flexContainer(row, space-between, center);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  .logo img {
+    height: 5rem;
+  }
+
+  .nav {
+    a {
+      display: inline-block;
+      padding: 1rem 3rem;
+    }
+  }
+
+  .btn {
+    &:hover {
+      color: @secondaryColor;
+    }
+  }
+
+  @media @mobile {
+    .flexContainer(column, space-between, center);
+    padding: .5rem 1.5rem;
+
+    .logo {
+      padding-bottom: 1rem;
+    }
+
+    .nav {
+      a {
+        padding: .5rem 2rem;
+      }
+    }
+  }
+}

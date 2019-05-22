@@ -4,14 +4,24 @@
 
 html {
   font-size: 62.5%;
+
+  @media @mobile {
+    font-size: 50%;
+  }
 }
 
-html, body {
-  font-family: 'Quicksand', sans-serif;
-}
-
-h1, h2, h3, h4, h5 {
+html,
+body {
   font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
 }
 
 h1 {
@@ -42,4 +52,22 @@ p {
 img {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: @primaryColor;
+
+  &:hover {
+    color: @tertiaryColor;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  transition: all .2s;
 }

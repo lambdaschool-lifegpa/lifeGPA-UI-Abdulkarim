@@ -1,0 +1,118 @@
+.testimonials {
+  padding: 7rem 4rem;
+  color: @white;
+  background-image: linear-gradient(to right bottom, rgba(@primaryColor, .8), rgba(@tertiaryColor, .5)), url('../../assets/img/carl-heyerdahl-181868-unsplash.jpg');
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%);
+  min-height: 70vh;
+  .flexContainer(column, center, center);
+  text-align: center;
+
+  &--heading {
+    color: @secondaryColor;
+    text-shadow: 0 0 3px @white;
+    font-weight: 700;
+    padding-bottom: 4rem;
+  }
+
+  &--carousel {
+    position: relative;
+    padding: 2rem 10rem;
+    background-color: rgba(@secondaryColor, .5);
+  }
+
+  .testimonial {
+
+    &:not(:nth-of-type(2)) {
+      display: none;
+    }
+
+    &--text,
+    &--author {
+      font-size: 3rem;
+      font-weight: 300;
+      text-shadow: 1px 1px 1px rgba(@secondaryColor, .3);
+      border-left: .5px solid rgba(@white, .3);
+      border-right: .5px solid rgba(@white, .3);
+      margin: -2rem auto;
+      padding: 1rem 4rem;
+    }
+  }
+
+  .left-button,
+  .right-button {
+    .flexContainer(row, center, none);
+    color: @white;
+    text-shadow: 0px 0px 9px rgba(@secondaryColor, .3);
+    font-weight: bold;
+    font-size: 6rem;
+    border-radius: 50%;
+    width: 10rem;
+    padding: 1rem;
+    height: 10rem;
+    cursor: pointer;
+    z-index: 5;
+    position: absolute;
+
+    &:hover {
+      text-shadow: 2px 0px 5px rgba(@secondaryColor, .9);
+    }
+  }
+
+  .left-button {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+
+  .right-button {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+
+  @media @mobile {
+    clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+    padding: 5rem 3rem;
+
+    &--heading {
+      padding-bottom: 3rem;
+    }
+
+    &--carousel {
+      position: relative;
+      padding: 2rem;
+    }
+
+    .testimonial {
+
+      &:not(:nth-of-type(2)) {
+        display: none;
+      }
+
+      &--text,
+      &--author {
+        font-size: 2.2rem;
+        font-weight: 300;
+        text-shadow: 1px 1px 1px rgba(@secondaryColor, .3);
+      }
+
+    }
+
+    .left-button,
+    .right-button {
+      padding: 0;
+      height: 6rem;
+      width: 6rem;
+    }
+
+    .left-button {
+      margin-left: -3rem;
+    }
+
+    .right-button {
+      margin-right: -3rem;
+    }
+  }
+}

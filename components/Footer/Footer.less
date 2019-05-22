@@ -1,0 +1,42 @@
+.footer {
+  padding: 0 4rem;
+  color: @white;
+  background-color: darken(@secondaryColor, 10%);
+  margin-top: 7rem;
+  .flexContainer(column, center, center);
+  text-align: center;
+
+  .logo {
+    background: rgba(darken(@tertiaryColor, 30%), .9);
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 2rem;
+    transform: translateY(-50%);
+    box-shadow: 0 0 .8rem rgba(@secondaryColor, .6);
+
+    img {
+      height: 6rem;
+    }
+  }
+
+  .btn {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+
+  .footnote {
+    border-top: 1px solid rgba(@white, .4);
+    .flexContainer(row, space-between, normal);
+    width: 100%;
+    margin-top: 2rem;
+    padding: 2rem;
+
+    .nav {
+      .flexContainer(row, space-between, normal)
+    }
+
+    @media @mobile {
+      .flexContainer(column-reverse, space-between, center);
+    }
+  }
+}

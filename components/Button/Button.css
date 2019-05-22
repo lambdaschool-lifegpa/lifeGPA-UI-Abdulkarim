@@ -1,0 +1,39 @@
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  /* make sure colors have enough contrast! */
+  color: #FFFFFF;
+  background-color: #9555AF;
+}
+/* old-school "down" effect on clic + color tweak */
+.btn:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+/* inverse colors on hover */
+.btn:hover {
+  color: #9050AA;
+  border-color: currentColor;
+  background-color: white;
+}
+/* Firefox: remove the inner border shown on focus */
+.btn::-moz-focus-inner {
+  border: none;
+}
+/* make sure we have a visible focus ring */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5), 0 0 0 1.5px rgba(255, 105, 180, 0.5);
+}

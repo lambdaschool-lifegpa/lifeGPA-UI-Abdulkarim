@@ -133,6 +133,11 @@ table {
 html {
   font-size: 62.5%;
 }
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+}
 html,
 body {
   font-family: 'Quicksand', sans-serif;
@@ -163,4 +168,56 @@ p {
 img {
   max-width: 100%;
   height: auto;
+}
+a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #FFEB38;
+}
+.header {
+  background-color: #141115;
+  padding: .5rem 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+}
+.header .logo img {
+  height: 5rem;
+}
+.header .nav a {
+  display: inline-block;
+  padding: 1rem 3rem;
+}
+.header .nav a:hover {
+  color: #b47ce8;
+}
+.header .nav .cta {
+  color: #9B51E0;
+  background: #FFEB38;
+  border-radius: 100px;
+}
+.header .nav .cta:hover {
+  background: #9B51E0;
+  color: #FFEB38;
+}
+@media (max-width: 500px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1.5rem;
+  }
+  .header .logo {
+    padding-bottom: 1rem;
+  }
+  .header .nav a {
+    padding: .5rem 2rem;
+  }
+}
+.hero {
+  padding-top: 5rem;
 }

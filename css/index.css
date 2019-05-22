@@ -5,6 +5,27 @@
   font-display: swap;
   src: local('Quicksand Regular'), local('Quicksand-Regular'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hK1QI.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Quicksand Bold'), local('Quicksand-Bold'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L6.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Raleway Light'), local('Raleway-Light'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwIYqWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -139,16 +160,22 @@ table {
 html {
   font-size: 62.5%;
 }
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+}
 html,
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
 }
 h1 {
   font-size: 4rem;
@@ -173,4 +200,369 @@ p {
 img {
   max-width: 100%;
   height: auto;
+}
+a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #FFEB38;
+}
+a:hover {
+  color: #9B51E0;
+}
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.2s;
+}
+.header {
+  background-color: #141115;
+  padding: 0.5rem 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.header .logo img {
+  height: 5rem;
+}
+.header .nav a {
+  display: inline-block;
+  padding: 1rem 3rem;
+}
+.header .btn:hover {
+  color: #141115;
+}
+@media (max-width: 500px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+  }
+  .header .logo {
+    padding-bottom: 1rem;
+  }
+  .header .nav a {
+    padding: 0.5rem 2rem;
+  }
+}
+.hero {
+  margin-top: 5rem;
+  padding: 2rem 4rem;
+  min-height: calc(100vh - 7rem);
+  text-align: center;
+  color: #FBFFFE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, rgba(20, 17, 21, 0.6), rgba(255, 235, 56, 0.4)), url('../../assets/img/tamarcus-brown-134928-unsplash.jpg');
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0%, 100% 92%, 0% 100%);
+}
+.hero .jumbotron {
+  width: 90%;
+  background-color: rgba(20, 17, 21, 0.2);
+}
+.hero .jumbotron--title {
+  font-size: 4.5rem;
+  padding: 2rem;
+  border-bottom: 0.5px solid rgba(251, 255, 254, 0.4);
+}
+.hero .jumbotron--subtitle {
+  font-size: 2rem;
+  padding: 2rem;
+  font-weight: light;
+}
+.hero .jumbotron--btn {
+  margin-bottom: 2rem;
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  .hero {
+    margin-top: 8rem;
+    padding: 1rem;
+  }
+  .hero .jumbotron {
+    width: 95%;
+    background-color: transparent;
+  }
+  .hero .jumbotron--title,
+  .hero .jumbotron--subtitle {
+    padding: 1rem;
+  }
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 3rem;
+  min-height: 100vh;
+  text-align: center;
+}
+.features .feature {
+  flex-basis: 30%;
+  margin-bottom: 1rem;
+  padding: 4rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.features .feature--icon {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .features .feature {
+    flex-basis: 90%;
+    padding: 1rem;
+    margin: 2rem 1rem;
+    flex-wrap: wrap;
+  }
+}
+.testimonials {
+  padding: 7rem 4rem;
+  color: #FBFFFE;
+  background-image: linear-gradient(to right bottom, rgba(255, 235, 56, 0.8), rgba(155, 81, 224, 0.5)), url('../../assets/img/carl-heyerdahl-181868-unsplash.jpg');
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%);
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.testimonials--heading {
+  color: #141115;
+  text-shadow: 0 0 3px #FBFFFE;
+  font-weight: 700;
+  padding-bottom: 4rem;
+}
+.testimonials--carousel {
+  position: relative;
+  padding: 2rem 10rem;
+  background-color: rgba(20, 17, 21, 0.5);
+}
+.testimonials .testimonial:not(:nth-of-type(2)) {
+  display: none;
+}
+.testimonials .testimonial--text,
+.testimonials .testimonial--author {
+  font-size: 3rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 1px rgba(20, 17, 21, 0.3);
+  border-left: 0.5px solid rgba(251, 255, 254, 0.3);
+  border-right: 0.5px solid rgba(251, 255, 254, 0.3);
+  margin: -2rem auto;
+  padding: 1rem 4rem;
+}
+.testimonials .left-button,
+.testimonials .right-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: none;
+  color: #FBFFFE;
+  text-shadow: 0px 0px 9px rgba(20, 17, 21, 0.3);
+  font-weight: bold;
+  font-size: 6rem;
+  border-radius: 50%;
+  width: 10rem;
+  padding: 1rem;
+  height: 10rem;
+  cursor: pointer;
+  z-index: 5;
+  position: absolute;
+}
+.testimonials .left-button:hover,
+.testimonials .right-button:hover {
+  text-shadow: 2px 0px 5px rgba(20, 17, 21, 0.9);
+}
+.testimonials .left-button {
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.testimonials .right-button {
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+@media (max-width: 500px) {
+  .testimonials {
+    clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+    padding: 5rem 3rem;
+  }
+  .testimonials--heading {
+    padding-bottom: 3rem;
+  }
+  .testimonials--carousel {
+    position: relative;
+    padding: 2rem;
+  }
+  .testimonials .testimonial:not(:nth-of-type(2)) {
+    display: none;
+  }
+  .testimonials .testimonial--text,
+  .testimonials .testimonial--author {
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 1px rgba(20, 17, 21, 0.3);
+  }
+  .testimonials .left-button,
+  .testimonials .right-button {
+    padding: 0;
+    height: 6rem;
+    width: 6rem;
+  }
+  .testimonials .left-button {
+    margin-left: -3rem;
+  }
+  .testimonials .right-button {
+    margin-right: -3rem;
+  }
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn {
+  display: inline-block;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border: double 1px transparent;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  color: #141115;
+  background-color: #FFEB38;
+}
+.btn:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+.btn:hover {
+  border-color: currentColor;
+  background-color: #ffe605;
+  font-weight: 700;
+}
+.btn:focus {
+  outline: none;
+}
+.footer {
+  padding: 0 4rem;
+  color: #FBFFFE;
+  background-color: #000000;
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer .logo {
+  background: rgba(78, 23, 129, 0.9);
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 2rem;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0.8rem rgba(20, 17, 21, 0.6);
+}
+.footer .logo img {
+  height: 6rem;
+}
+.footer .btn {
+  font-size: 2rem;
+  margin: 1rem;
+}
+.footer .footnote {
+  border-top: 1px solid rgba(251, 255, 254, 0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: normal;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+.footer .footnote .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: normal;
+}
+@media (max-width: 500px) {
+  .footer .footnote {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.about {
+  margin-top: 10rem;
+  text-align: center;
+}
+.about--team {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.2s;
+}
+.about--heading h2 {
+  margin: 5rem auto;
+}
+.about .card {
+  width: 25%;
+  margin: 1rem;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.about .card--title {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #141115, #9B51E0);
+}
+.about .card--role {
+  color: #141115;
+  font-size: 110%;
+  padding: 0.3rem 1rem;
+  background-color: rgba(255, 235, 56, 0.85);
+}
+@media (max-width: 500px) {
+  .about .card {
+    width: 80%;
+  }
 }

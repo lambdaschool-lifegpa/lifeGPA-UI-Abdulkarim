@@ -1,0 +1,5 @@
+.hero {
+  padding-top: 7rem;
+  min-height: calc(93vh);
+  border: 1px solid red;
+}
