@@ -6,18 +6,18 @@
   src: local('Quicksand Regular'), local('Quicksand-Regular'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hK1QI.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Raleway';
-  font-style: italic;
-  font-weight: 300;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
   font-display: swap;
-  src: local('Raleway Light Italic'), local('Raleway-LightItalic'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptpg8zYS_SKggPNyCgw5qN_AtCe.ttf) format('truetype');
+  src: local('Quicksand Bold'), local('Quicksand-Bold'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pkHEYT8L6.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
-  font-weight: 200;
+  font-weight: 300;
   font-display: swap;
-  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwOIpWqZPBQ.ttf) format('truetype');
+  src: local('Raleway Light'), local('Raleway-Light'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwIYqWqZPBQ.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Raleway';
@@ -232,18 +232,6 @@ a {
   display: inline-block;
   padding: 1rem 3rem;
 }
-.header .nav a:hover {
-  color: #b47ce8;
-}
-.header .nav .cta {
-  color: #9B51E0;
-  background: #FFEB38;
-  border-radius: 100px;
-}
-.header .nav .cta:hover {
-  background: #9B51E0;
-  color: #FFEB38;
-}
 @media (max-width: 500px) {
   .header {
     display: flex;
@@ -290,9 +278,9 @@ a {
 }
 .hero .jumbotron--btn {
   margin-bottom: 2rem;
-  background: transparent;
-  color: #FBFFFE;
-  border: 1px solid #FBFFFE;
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 @media (max-width: 500px) {
   .hero {
@@ -342,7 +330,7 @@ a {
 .testimonials {
   padding: 7rem 4rem;
   color: #FBFFFE;
-  background-image: linear-gradient(to right bottom, rgba(255, 235, 56, 0.9), rgba(20, 17, 21, 0.9)), url('../../assets/img/carl-heyerdahl-181868-unsplash.jpg');
+  background-image: linear-gradient(to right bottom, rgba(255, 235, 56, 0.8), rgba(155, 81, 224, 0.5)), url('../../assets/img/carl-heyerdahl-181868-unsplash.jpg');
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%);
@@ -354,13 +342,15 @@ a {
   text-align: center;
 }
 .testimonials--heading {
-  color: #9B51E0;
-  text-shadow: 1px 1px 1px #FBFFFE;
+  color: #141115;
+  text-shadow: 0 0 3px #FBFFFE;
+  font-weight: 700;
   padding-bottom: 4rem;
 }
 .testimonials--carousel {
   position: relative;
-  padding: 2rem 14rem;
+  padding: 2rem 10rem;
+  background-color: rgba(20, 17, 21, 0.5);
 }
 .testimonials .testimonial:not(:nth-of-type(2)) {
   display: none;
@@ -370,6 +360,10 @@ a {
   font-size: 3rem;
   font-weight: 300;
   text-shadow: 1px 1px 1px rgba(20, 17, 21, 0.3);
+  border-left: 0.5px solid rgba(251, 255, 254, 0.3);
+  border-right: 0.5px solid rgba(251, 255, 254, 0.3);
+  margin: -2rem auto;
+  padding: 1rem 4rem;
 }
 .testimonials .left-button,
 .testimonials .right-button {
@@ -391,7 +385,7 @@ a {
 }
 .testimonials .left-button:hover,
 .testimonials .right-button:hover {
-  text-shadow: 0px 0px 5px rgba(20, 17, 21, 0.6);
+  text-shadow: 2px 0px 5px rgba(20, 17, 21, 0.9);
 }
 .testimonials .left-button {
   top: 50%;
@@ -436,4 +430,35 @@ a {
   .testimonials .right-button {
     margin-right: -3rem;
   }
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn {
+  display: inline-block;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border: double 1px transparent;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  color: #141115;
+  background-color: #FFEB38;
+}
+.btn:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+.btn:hover {
+  border-color: currentColor;
+  background-color: #ffe605;
+  font-weight: 700;
+}
+.btn:focus {
+  outline: none;
 }

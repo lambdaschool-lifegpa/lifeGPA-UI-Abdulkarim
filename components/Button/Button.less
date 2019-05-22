@@ -1,0 +1,35 @@
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border: double 1px transparent;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  color: @secondaryColor;
+  background-color: @primaryColor;
+
+  &:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+  }
+
+  &:hover {
+    border-color: currentColor;
+    background-color: darken(@primaryColor,10%);
+    font-weight: 700;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
