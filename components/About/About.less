@@ -1,0 +1,46 @@
+.about {
+  margin-top: 10rem;
+  text-align: center;
+
+  &--team {
+    width: 100%;
+    .flexContainer(row, space-around, center);
+    flex-wrap: wrap;
+    transition: all .2s;
+  }
+
+  &--heading h2 {
+    margin: 5rem auto;
+  }
+
+  .card {
+    width: 25%;
+    margin: 1rem;
+    color: white;
+    border-radius: 5px;
+    .flexContainer(column, normal, normal);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+    background-color: rgba(255, 255, 255, .7);
+
+    &--title {
+      font-size: 2rem;
+      padding: .5rem 1rem;
+      display: inline-block;
+      font-weight: 300;
+      margin: 0;
+      text-transform: uppercase;
+      background-image: linear-gradient(to right, @secondaryColor, @tertiaryColor);
+    }
+
+    &--role {
+      color: @secondaryColor;
+      font-size: 110%;
+      padding: .3rem 1rem;
+      background-color: rgba(@primaryColor, .85);
+    }
+
+    @media @mobile {
+      width: 80%;
+    }
+  }
+}

@@ -518,3 +518,51 @@ button {
     align-items: center;
   }
 }
+.about {
+  margin-top: 10rem;
+  text-align: center;
+}
+.about--team {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.2s;
+}
+.about--heading h2 {
+  margin: 5rem auto;
+}
+.about .card {
+  width: 25%;
+  margin: 1rem;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.about .card--title {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #141115, #9B51E0);
+}
+.about .card--role {
+  color: #141115;
+  font-size: 110%;
+  padding: 0.3rem 1rem;
+  background-color: rgba(255, 235, 56, 0.85);
+}
+@media (max-width: 500px) {
+  .about .card {
+    width: 80%;
+  }
+}
