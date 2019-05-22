@@ -2,7 +2,7 @@
   .flexContainer(column, space-evenly, center);
   margin-top: 3rem;
   padding: 3rem;
-  min-width: 100vh;
+  min-height: 100vh;
   text-align: center;
 
   .feature {
@@ -10,8 +10,12 @@
     margin-bottom: 1rem;
     padding: 4rem;
     margin: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .08);
+    // box-shadow: 0 0 20px rgba(0, 0, 0, .08);
     .flexContainer(column, space-between, center);
+
+    &--icon {
+      width: 50%;
+    }
   }
 
   @media @mobile {
