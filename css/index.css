@@ -229,29 +229,48 @@ a:hover {
   z-index: 10;
 }
 .header .logo img {
-  height: 5rem;
+  height: 6rem;
 }
 .header .nav a {
   display: inline-block;
   padding: 1rem 3rem;
 }
+.header .mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100vh;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(20, 17, 21, 0.98);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.header .mobile-nav.active {
+  opacity: 1;
+  right: 0;
+}
 .header .btn:hover {
   color: #141115;
 }
 .header #hamburger-icon {
-  width: 50px;
-  height: 25px;
+  width: 4rem;
+  height: 2.5rem;
   position: relative;
   display: none;
+  z-index: 50;
 }
 .header #hamburger-icon .line {
   display: block;
-  background: #FBFFFE;
-  width: 50px;
-  height: 4px;
+  background: #FFEB38;
+  width: 4rem;
+  height: 0.4rem;
   position: absolute;
   left: 0;
-  border-radius: 2px;
+  border-radius: 0.2rem;
   transition: all 0.4s;
 }
 .header #hamburger-icon .line.line-1 {
@@ -263,22 +282,14 @@ a:hover {
 .header #hamburger-icon .line.line-3 {
   top: 100%;
 }
-.header #hamburger-icon:hover .line-1,
-.header #hamburger-icon:focus .line-1 {
-  transform: translateY(-2px);
-}
-.header #hamburger-icon:hover .line-3,
-.header #hamburger-icon:focus .line-3 {
-  transform: translateY(2px);
-}
 .header #hamburger-icon.active .line-1 {
-  transform: translateY(12.5px) translateX(0) rotate(45deg);
+  transform: translateY(1.25rem) translateX(0) rotate(45deg);
 }
 .header #hamburger-icon.active .line-2 {
   opacity: 0;
 }
 .header #hamburger-icon.active .line-3 {
-  transform: translateY(-12.5px) translateX(0) rotate(-45deg);
+  transform: translateY(-1.25rem) translateX(0) rotate(-45deg);
 }
 @media (max-width: 500px) {
   .header #hamburger-icon {
@@ -291,16 +302,16 @@ a:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1.5rem;
-  }
-  .header .logo {
-    padding-bottom: 1rem;
+    padding: 1rem 1.5rem;
   }
   .header .nav {
     display: none;
   }
   .header .nav a {
     padding: 0.5rem 2rem;
+  }
+  .header .mobile-nav a {
+    margin-top: 4rem;
   }
 }
 .hero {
@@ -340,7 +351,7 @@ a:hover {
 }
 @media (max-width: 500px) {
   .hero {
-    margin-top: 8rem;
+    margin-top: 7rem;
     padding: 1rem;
   }
   .hero .jumbotron {
