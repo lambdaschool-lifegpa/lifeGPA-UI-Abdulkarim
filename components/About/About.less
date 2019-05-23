@@ -3,19 +3,26 @@
   text-align: center;
 
   &--team {
-    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
     .flexContainer(row, space-around, center);
     flex-wrap: wrap;
     transition: all .2s;
   }
 
-  &--heading h2 {
-    margin: 5rem auto;
+  &--heading {
+    h2 {
+      margin: 5rem auto;
+    }
+    img {
+      width: 50%;
+    }
   }
 
   .card {
     width: 25%;
-    margin: 1rem;
+    margin: 2rem;
     color: white;
     border-radius: 5px;
     .flexContainer(column, normal, normal);

@@ -246,10 +246,13 @@ a:hover {
   justify-content: center;
   align-items: center;
   background: rgba(20, 17, 21, 0.98);
+  visibility: hidden;
   opacity: 0;
   transition: all 1s ease-in-out;
 }
 .header .mobile-nav.active {
+  display: flex;
+  visibility: visible;
   opacity: 1;
   right: 0;
 }
@@ -590,7 +593,9 @@ button {
   text-align: center;
 }
 .about--team {
-  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -601,9 +606,12 @@ button {
 .about--heading h2 {
   margin: 5rem auto;
 }
+.about--heading img {
+  width: 50%;
+}
 .about .card {
   width: 25%;
-  margin: 1rem;
+  margin: 2rem;
   color: white;
   border-radius: 5px;
   display: flex;
