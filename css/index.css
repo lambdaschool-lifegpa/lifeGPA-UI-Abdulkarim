@@ -159,6 +159,7 @@ table {
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 @media (max-width: 500px) {
   html {
@@ -215,6 +216,36 @@ a:hover {
   justify-content: center;
   width: 100%;
   transition: all 0.2s;
+}
+#back-to-top {
+  display: inline-block;
+  background-color: #FFEB38;
+  padding: 1rem;
+  font-size: 3rem;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 6rem;
+  right: 3rem;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  color: #FBFFFE;
+  text-shadow: 0 0 2px #000;
+}
+#back-to-top:hover {
+  cursor: pointer;
+  background-color: #4a3f4d;
+}
+#back-to-top:active {
+  background-color: #7f6c86;
+}
+@media (max-width: 500px) {
+  #back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }
 .header {
   background-color: #141115;
