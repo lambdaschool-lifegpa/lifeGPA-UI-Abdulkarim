@@ -25,13 +25,14 @@
     height: 100vh;
     width: 100%;
     .flexContainer(column, center, center);
-    background: rgba(@secondaryColor, .98);
+    background: transparent;
     visibility: hidden;
     opacity: 0;
     transition: all 1s ease-in-out;
 
     &.active {
       display: flex;
+      background: rgba(@secondaryColor, .98);
       visibility: visible;
       opacity: 1;
       right: 0;

@@ -206,9 +206,11 @@ a {
   font-size: 1.6rem;
   text-decoration: none;
   color: #FFEB38;
+  transition: all 0.5s ease-in-out;
 }
 a:hover {
   color: #9B51E0;
+  transform: scale(1.1);
 }
 .flex-container {
   display: flex;
@@ -276,13 +278,14 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(20, 17, 21, 0.98);
+  background: transparent;
   visibility: hidden;
   opacity: 0;
   transition: all 1s ease-in-out;
 }
 .header .mobile-nav.active {
   display: flex;
+  background: rgba(20, 17, 21, 0.98);
   visibility: visible;
   opacity: 1;
   right: 0;
