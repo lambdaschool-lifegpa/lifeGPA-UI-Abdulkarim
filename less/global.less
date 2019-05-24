@@ -4,6 +4,11 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @media @tablet {
+    font-size: 56%;
+  }
 
   @media @mobile {
     font-size: 50%;
@@ -58,9 +63,11 @@ a {
   font-size: 1.6rem;
   text-decoration: none;
   color: @primaryColor;
+  transition: all .5s ease-in-out;
 
   &:hover {
     color: @tertiaryColor;
+    transform: scale(1.1);
   }
 }
 
@@ -70,4 +77,36 @@ a {
   justify-content: center;
   width: 100%;
   transition: all .2s;
+}
+
+#back-to-top {
+  display: inline-block;
+  background-color: @primaryColor;
+  padding: 1rem;
+  font-size: 3rem;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 6rem;
+  right: 3rem;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  color: @white;
+  text-shadow: 0 0 2px #000;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(@secondaryColor, 20%);
+  }
+
+  &:active {
+    background-color: lighten(@secondaryColor, 40%);
+  }
+
+  @media @mobile {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }

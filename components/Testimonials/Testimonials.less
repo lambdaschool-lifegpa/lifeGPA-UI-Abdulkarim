@@ -1,7 +1,7 @@
 .testimonials {
   padding: 7rem 4rem;
   color: @white;
-  background-image: linear-gradient(to right bottom, rgba(@primaryColor, .8), rgba(@tertiaryColor, .5)), url('../../assets/img/carl-heyerdahl-181868-unsplash.jpg');
+  background-image: linear-gradient(to right bottom, rgba(@primaryColor, .8), rgba(@tertiaryColor, .5)), url('../../assets/img/koushik-chowdavarapu-682190-unsplash.jpg');
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%);
@@ -18,8 +18,18 @@
 
   &--carousel {
     position: relative;
+    width: 60%;
     padding: 2rem 10rem;
     background-color: rgba(@secondaryColor, .5);
+
+    @media @tablet {
+      width: 85%;
+      padding: 1rem 3rem;
+    }
+
+    @media @mobile {
+      width: 90%;
+    }
   }
 
   .testimonial {
