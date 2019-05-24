@@ -161,6 +161,11 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@media (max-width: 800px) {
+  html {
+    font-size: 56%;
+  }
+}
 @media (max-width: 500px) {
   html {
     font-size: 50%;
@@ -423,6 +428,13 @@ a:hover {
 .features .feature--icon {
   width: 50%;
 }
+@media (max-width: 800px) {
+  .features .feature {
+    flex-basis: 45%;
+    padding: 1rem;
+    margin: 2rem 1rem;
+  }
+}
 @media (max-width: 500px) {
   .features .feature {
     flex-basis: 90%;
@@ -456,6 +468,12 @@ a:hover {
   width: 60%;
   padding: 2rem 10rem;
   background-color: rgba(20, 17, 21, 0.5);
+}
+@media (max-width: 800px) {
+  .testimonials--carousel {
+    width: 85%;
+    padding: 1rem 3rem;
+  }
 }
 @media (max-width: 500px) {
   .testimonials--carousel {
@@ -700,6 +718,11 @@ button {
 .about .card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 2.5 rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 800px) {
+  .about .card {
+    width: 40%;
+  }
 }
 @media (max-width: 500px) {
   .about .card {
