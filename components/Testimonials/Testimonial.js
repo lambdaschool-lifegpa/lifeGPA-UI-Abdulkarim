@@ -13,6 +13,8 @@ class Testimonial {
     this.currentIndex < 1 ? this.currentIndex = this.testimonials.length - 1 : this.currentIndex--
     this.testimonials.forEach(testimonial => testimonial.style.display = 'none');
     this.testimonials[this.currentIndex].style.display = 'block';
+    this.testimonials[this.currentIndex].style.transform = 'translateX(0)';
+    this.testimonials[this.currentIndex].style.opacity = '1';
     TweenMax.from(this.testimonials[this.currentIndex], 1, {x: 100, opacity:0})
   }
 
@@ -20,7 +22,9 @@ class Testimonial {
     this.currentIndex > this.testimonials.length - 2 ? this.currentIndex = 0 : this.currentIndex++
     this.testimonials.forEach(testimonial => testimonial.style.display = 'none');
     this.testimonials[this.currentIndex].style.display = 'block';
-    TweenMax.from(this.testimonials[this.currentIndex], 2, {x: -100, opacity:0})
+    this.testimonials[this.currentIndex].style.opacity = '1';
+    this.testimonials[this.currentIndex].style.transform = 'translateX(0)';
+    TweenMax.from(this.testimonials[this.currentIndex], 1, {x: -100, opacity:0})
   }
 }
 
