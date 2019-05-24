@@ -15,6 +15,7 @@
     h2 {
       margin: 5rem auto;
     }
+
     img {
       width: 50%;
     }
@@ -25,9 +26,11 @@
     margin: 2rem;
     color: white;
     border-radius: 5px;
+    position: relative;
     .flexContainer(column, normal, normal);
     box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
     background-color: rgba(255, 255, 255, .7);
+    transition: all .5s ease-in-out;
 
     &--title {
       font-size: 2rem;
@@ -44,6 +47,37 @@
       font-size: 110%;
       padding: .3rem 1rem;
       background-color: rgba(@primaryColor, .85);
+    }
+
+    .socials {
+      .flexContainer(row, space-around, center);
+      padding: 1rem;
+      background: transparent;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: .1;
+      transition: all .5s ease-in-out;
+
+      &:hover {
+        background: rgba(@white, .70);
+        opacity: 1;
+      }
+
+      .social img {
+        height: 2rem;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 2.5 rgba(0, 0, 0, .5);
     }
 
     @media @mobile {
